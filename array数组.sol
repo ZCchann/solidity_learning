@@ -1,4 +1,5 @@
-// SPDX-License-Identifil: MIT
+// SPDX-License-Identifier: MIT
+pragma solidity  >=0.7.0 <0.9.0;
 
 //本章节讲数组
 //等于python的List

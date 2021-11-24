@@ -1,4 +1,5 @@
-// SPDX-License-Identifil: MIT
+// SPDX-License-Identifier: MIT
+pragma solidity  >=0.7.0 <0.9.0;
 
 //本文件讲循环
 
