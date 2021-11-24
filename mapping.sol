@@ -14,10 +14,12 @@ contract Mapping{
 
 
     function setgetbalnance(address addr, uint256 amount) public{
+        //设定mapping数值
         balanceOf[addr] = balanceOf[addr] + amount;
     } 
 
     function remove(address addr) public{
+        //删除mapping的键
         delete balanceOf[addr];
     }
 
