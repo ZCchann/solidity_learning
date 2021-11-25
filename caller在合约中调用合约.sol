@@ -8,8 +8,8 @@ contract Get{
     uint public value;
     uint public x;
 
-    function getbalance() public view{
-        address(this).balance;
+    function getbalance() public view returns(uint256){
+        return address(this).balance;
     }
 
     function setX(uint _x) public returns (uint){
@@ -40,10 +40,10 @@ contract Send{
         Caller.setX(_x);
     }
     //带金额发送
-    function callsetXandSendEther(address _addr, uint256 _x) payable public returns(uint,uint){
+    function callsetXandSendEther(address _addr, uint256 _x) payable public{
         //定义一个变量"Caller" 变量类型为合约GET 变量为GET的合约地址
         Get Caller = Get(_addr);
-        //对端函数所需要传入的值
-        (uint256 x, uint256 value) = Caller.setXandSendEther{value: msg.value}(_x);
+        //对端函数所需要传入的值 传入value = 输入的金额
+        Caller.setXandSendEther{value: msg.value}(_x);
     }
 }
